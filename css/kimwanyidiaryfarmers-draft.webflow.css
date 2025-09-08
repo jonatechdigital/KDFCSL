@@ -6394,5 +6394,46 @@ figcaption {
     grid-column: span 1 / span 1;
   }
 }
+/* This class makes links un-clickable */
+.is-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+/* --- Hero Section Adjustments (Final Version) --- */
 
+/* 1. Set the SECTION height to fill the viewport minus the navbar */
+.section_header9 {
+  height: calc(100vh - 4.5rem); /* Full viewport height minus navbar height */
+  display: flex; /* Ensure it's a flex container to control its child */
+  flex-direction: column;
+}
 
+/* 2. Override the problematic styles on the inner component */
+.header9_component {
+  height: 100%; /* Make this component fill its parent (the section) */
+  min-height: auto; /* IMPORTANT: This removes the conflicting style */
+}
+
+/* 3. Center the images properly on all screen sizes */
+.header9_background-image {
+  object-position: 50% 50%; /* Center the image horizontally and vertically */
+}
+
+/* Optional: You can still fine-tune specific images if needed */
+.header9_background-image.imageone {
+   object-position: 50% 30%; /* Example: Focuses more on the top of the first image */
+}
+/* --- Hero Section Content Control --- */
+
+/* Make the image wrapper flexible so it can grow and shrink */
+.header9_image-wrapper {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+/* Make the content wrapper inflexible so it maintains its size */
+.header9_component > .padding-global {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
