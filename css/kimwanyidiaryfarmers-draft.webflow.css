@@ -6437,3 +6437,59 @@ figcaption {
   flex-grow: 0;
   flex-shrink: 0;
 }
+/* --- Thank You Pop-up Styles (Further Improved) --- */
+
+.popup-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.popup-content {
+  background-color: #ffffff;
+  color: #0c0801;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.popup-icon {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #78b943; /* Your green color */
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+/* Style for the "Thank You!" heading */
+.popup-content h2 {
+  color: #78b943; /* Apply your green heading color */
+  margin-top: 0; /* Remove default h2 top margin if needed */
+  margin-bottom: 1rem; /* Adjust spacing as needed */
+  font-size: 2.5rem; /* Make it more prominent */
+}
+
+/* Style for the Close button */
+.popup-content #closePopupButton {
+  margin-top: 1.5rem; /* Add top margin */
+  /* The button is already centered because its parent (.popup-content) has text-align: center; */
+}
+
+
+/* Media query for smaller mobile screens */
+@media screen and (max-width: 479px) {
+  .popup-content {
+    padding: 2rem 1.5rem;
+  }
+}
