@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = htmlspecialchars($_POST['Phone']);
     $area_of_support = htmlspecialchars($_POST['Area-of-Support']);
     $role = htmlspecialchars($_POST['Role-in-Partnership']);
-    $message_content = htmlspecialchars($_POST['Contact-6-Message']);
+    $message_content = htmlspecialchars($_POST['Message']);
 
     // --- STYLED EMAIL BODY ---
     $body = '
