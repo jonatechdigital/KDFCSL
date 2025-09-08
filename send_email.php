@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = "New Partnership Inquiry from " . $first_name . " " . $last_name;
 
     // --- EMAIL HEADERS ---
-    // These lines are crucial for styling and must be included.
     $from_name = "Kimwanyi Dairy Farmers";
     $from_email = "no-reply@kimwanyidairyfarmers.org";
     $headers = "MIME-Version: 1.0" . "\r\n";
@@ -66,8 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </body>
     </html>';
 
-    // --- SEND EMAIL (Corrected) ---
-    // The "$headers" variable MUST be included here to apply styling.
+    // --- SEND EMAIL ---
     if (mail($to, $subject, $body, $headers)) {
         http_response_code(200);
         echo "Thank you! Your message has been sent.";
